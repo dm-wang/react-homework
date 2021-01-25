@@ -1,27 +1,46 @@
-.clock__card--city{
-    margin: 20px;
-    width: 200px;
+.clock__card{
+    margin: 30px;
+    background-image: linear-gradient(180deg, #6FD0EE, #80D0C7, #F2F6EF);
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px grey;
+    color: white;
+    width: 250px;
     height: 200px;
 }
-  
+
+.clock__card:hover{
+    transform: translateY(-10px);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.clock--city{
+    height: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    margin: 0;
+    color:#F2F6EF;
+}
+
 .clock__container{
-    background: orange;
     width: 100%;
-    height: 80%;
+    height: 65%;
 }
   
 .clock__container--date{
-    background: yellow;
     width: 100%;
-    height: 15%;
+    height: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
   
 .clock__container--time{
-    background: greenyellow;
-    height: 85%;
+    height: 25%;
     display: flex;
     justify-content: center;
     align-items: center;

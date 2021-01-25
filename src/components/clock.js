@@ -41,19 +41,19 @@ class Clock extends React.Component {
     render(){
         const {city} = this.props 
         return (
-            <main>
-                <div className="clock__card--city">
+            <div className="clock__card">
+                <div className="clock--city">
                     <h1>{city}</h1>
-                    <div className="clock__container">
-                        <div className="clock__container--date">
-                            <span>{this.state.date}</span>
-                        </div>
-                        <div className="clock__container--time">
-                            <span>{this.state.time}</span>
-                        </div>
+                </div>
+                <div className="clock__container">
+                    <div className="clock__container--date">
+                        <span>{this.state.date}</span>
                     </div>
-                </div> 
-            </main>
+                    <div className="clock__container--time">
+                        <span>{this.state.time}</span>
+                    </div>
+                </div>
+            </div> 
         )
     };
 }

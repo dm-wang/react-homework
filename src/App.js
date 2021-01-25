@@ -10,6 +10,7 @@ function App() {
       <Clock tz="Korea/Seoul" city="Seoul"/>
       <Clock tz="America/New_York" city="New York"/>
       <Clock tz="Europe/London" city="London"/>
+      <Clock tz="America/Los_angeles" city="Los Angeles"/>
       {/* <Card title="Editor's Picks" img="product.png" subTitle="Gifts for Him" content="For Valentine's Day" /> */}
     </div>
   );
