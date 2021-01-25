@@ -8,7 +8,8 @@ class Clock extends React.Component {
        console.log("constructor", props)
        this.state = {
            time: '', //object
-           date: ''
+           date: '',
+           tz: props.tz
        }
        console.log('lifecycle-constructor')
   };
@@ -19,15 +20,15 @@ class Clock extends React.Component {
 
     componentDidMount(){
      //update state
-     console.log('lifecycle-componentDidMount') 
+     console.log('lifecycle-componentDidMount', this.props) 
      this.updateTime()
   };
 
     updateTime = () => {
         this.timer = setInterval(() => {
             this.setState({
-                time: moment().tz(`${city}`).format("h:mm:ss a"),
-                date: moment().tz(`${city}`).format("MMMM Do YYYY")
+                time: moment().tz(`${this.state.tz}`).format("h:mm:ss a"),
+                date: moment().tz(`${this.state.tz}`).format("MMMM Do YYYY")
             })
         },1000)
     };
@@ -39,17 +40,16 @@ class Clock extends React.Component {
 
     render(){
         const {city} = this.props 
-        console.log("render", city);
         return (
             <main>
                 <div className="clock__card--city">
                     <h1>{city}</h1>
                     <div className="clock__container">
                         <div className="clock__container--date">
-                            <span>Date: {this.state.date}</span>
+                            <span>{this.state.date}</span>
                         </div>
                         <div className="clock__container--time">
-                            <span>Time: {this.state.time}</span>
+                            <span>{this.state.time}</span>
                         </div>
                     </div>
                 </div> 
