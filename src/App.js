@@ -7,9 +7,9 @@ function App() {
   return (
     <div className="App"> 
       <Clock city="Sydney"/>
-      <Clock city="Sydney"/>
-      <Clock city="Sydney"/>
-      <Clock city="Sydney"/>
+      <Clock city="Seoul"/>
+      <Clock city="New York"/>
+      <Clock city="London"/>
       {/* <Card title="Editor's Picks" img="product.png" subTitle="Gifts for Him" content="For Valentine's Day" /> */}
     </div>
   );
