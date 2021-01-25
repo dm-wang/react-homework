@@ -6,18 +6,17 @@ import reportWebVitals from './reportWebVitals';
 import Clock from './components/clock';
 import Card from './components/card';
 
+ReactDOM.render(
+  <>
+   <App />
+  </>,
+  document.getElementById('root')
+);
 
 // ReactDOM.render(
-//   <>
-//    <Clock />
-//   </>,
-//   document.getElementById('root')
-// );
-
-ReactDOM.render(
-    <Card title="Editor's Picks" img="product.png" subTitle="Gifts for Him" content="For Valentine's Day" />,
-    document.getElementById('root')
-)
+//     <Card title="Editor's Picks" img="product.png" subTitle="Gifts for Him" content="For Valentine's Day" />,
+//     document.getElementById('root')
+// )
 
 // ReactDOM.render(
 //   <form>
