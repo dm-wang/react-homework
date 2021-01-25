@@ -3,12 +3,21 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Clock from './components/clock';
+import Card from './components/card';
 
 
 // ReactDOM.render(
-//   <h1>Hello React!!</h1>,
+//   <>
+//    <Clock />
+//   </>,
 //   document.getElementById('root')
 // );
+
+ReactDOM.render(
+    <Card title="Editor's Picks" img="product.png" subTitle="Gifts for Him" content="For Valentine's Day" />,
+    document.getElementById('root')
+)
 
 // ReactDOM.render(
 //   <form>
@@ -58,29 +67,6 @@ import reportWebVitals from './reportWebVitals';
 // const age = 12;
 // const str = `${name}${age}`;
 // console.log(str);
-
-/* homework */
-function Card(props){
-    return (
-        <div className="card">
-            <h2>{props.title}</h2>
-            <div className="container">
-                <div className="card__img">
-                    <img className="img" src={require(`./${props.img}`).default}/>
-                </div>
-                <h3>{props.subTitle}</h3>
-                <p>{props.content}</p>
-            </div>
-        </div>
-    )
-}
-
-ReactDOM.render(
-    <Card title="Editor's Picks" img="product.png" subTitle="Gifts for Him" content="For Valentine's Day" />,
-    document.getElementById('root')
-)
-/* homework */
-
 
 {/* If you want to start measuring performance in your app, pass a function
 to log results (for example: reportWebVitals(console.log))
